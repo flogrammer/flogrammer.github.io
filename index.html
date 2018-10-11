@@ -8,19 +8,33 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Zappiness</title>
+    <title>Thinkbay - </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+	
+	<!-- Slider CSS -->
+	<link href="vendor/jquery-asRange-master/dist/css/asRange.css">
+	
     <!-- Custom Fonts -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
 
+	 <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Plugin JavaScript -->
+	<script src="vendor/jquery-asRange-master/dist/jquery-asRange.js"></script>
+	
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
+	
   </head>
 
   <body id="page-top">
@@ -28,39 +42,71 @@
     <a class="menu-toggle rounded" href="#">
       <i class="fas fa-bars"></i>
     </a>
-    <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#page-top">Home</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#services">Services</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
 
     <!-- Header -->
-	<img  src="img/logo.png" alt="">
     <header class="masthead d-flex">
       <div class="container text-center my-auto">
-        <h1 class="mb-1">OVERCOME BOREDOM</h1>
+        <h1 class="mb-1">LANGWEILIG?</h1>
         <h3 class="mb-5">
-          <em>Don't know what to do? Let us help you...</em>
+          <em>Wir haben einige Ideen für dich...</em>
         </h3>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#categories">Categories</a>
-		<a class="btn btn-primary btn-xl js-scroll-trigger" href="#personalized">Personalized Ideas</a>
+		<!-- Characteristics filter -->
+		 <div class="panel panel-primary panel-transparent">
+			<div class="panel-text">
+				Alter
+			</div>
+			<!-- Alter -->
+			<div class="btn-group" data-toggle="buttons">
+			  <label class="btn btn-primary active">
+				<input type="radio" name="options" id="option1" checked> 12 - 17
+			  </label>
+			  <label class="btn btn-primary">
+				<input type="radio" name="options" id="option2"> 18 - 25
+			  </label>
+			  <label class="btn btn-primary">
+				<input type="radio" name="options" id="option3"> 26 - 35
+			  </label>
+			   <label class="btn btn-primary">
+				<input type="radio" name="options" id="option4"> 36 - 45
+			  </label>
+			  <label class="btn btn-primary">
+				<input type="radio" name="options" id="option5"> 50+
+			  </label>
+			</div>
+			</br>
+			<!-- Budget -->
+			<div class="panel-text">
+				Budget
+			</div>
+			<div class="btn-group" data-toggle="buttons">
+			  <label class="btn btn-primary active">
+				<input type="radio" name="options2" id="option11" checked> kostenlos
+			  </label>
+			  <label class="btn btn-primary">
+				<input type="radio" name="options2" id="option22"> Bis 10 €
+			  </label>
+			  <label class="btn btn-primary">
+				<input type="radio" name="options2" id="option33"> Bis 20 €
+			  </label>
+			</div>
+			</br>
+			<!-- Allein oder zusammen -->
+			<div class="panel-text">
+				Allein / Gemeinsam
+			</div>
+			<div class="btn-group" data-toggle="buttons">
+			  <label class="btn btn-primary active">
+				<input type="radio" name="options3" id="option111" checked> Allein
+			  </label>
+			  <label class="btn btn-primary">
+				<input type="radio" name="options3" id="option222"> Mit dem Partner
+			  </label>
+			  <label class="btn btn-primary">
+				<input type="radio" name="options3" id="option333"> Mit Freunden
+			  </label>
+			</div>
+			</br>
+		<div>
 		
       </div>
       <div class="overlay"></div>
@@ -131,23 +177,6 @@
 			<div class="content-section-heading text-center">
 			  <h3 class="text-secondary mb-0">Personalized search</h3>
 			  <h2 class="mb-5">Enter your characteristics</h2>
-			  
-			  <!-- Characteristics filter -->
-			  <div class="form-row">
-				<div class="form-group col-md-6">
-				  <input class="form-control" id="age" placeholder="Age">
-				</div>
-				<div class="form-group col-md-6">
-				  <input type="budget" class="form-control" id="budget" placeholder="Budget">
-				</div>
-				<div class="form-group col-md-6">
-				  <input type="budget" class="form-control" id="budget" placeholder="Duration">
-				</div>
-				<div class="form-group col-md-6">
-				  <input type="budget" class="form-control" id="budget" placeholder="Alone / With Friends">
-				</div>
-			  </div>
-
 			</div>
 		  </div>
 	</section>
@@ -174,7 +203,7 @@
             </a>
           </li>
         </ul>
-        <p class="text-muted small mb-0">Copyright &copy; Zappiness 2018</p>
+        <p class="text-muted small mb-0">Copyright &copy; Thinkbay 2018</p>
       </div>
     </footer>
 
@@ -183,15 +212,7 @@
       <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/stylish-portfolio.min.js"></script>
+   
 
   </body>
 
